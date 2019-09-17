@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body class="layout">
+        <header class="layout__header">
+            <h1 class="logo" href="/">Funtyx</h1>
+            <ul class="menu">
+                {% for item in site.data.navigation %}
+                    <li class="menu__item">
+                        <a href="{{ item.link }}" class="menu__link {% if page.url == item.link %} menu__link_current {% endif %}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul class="social">
+                {% for item in site.data.social %}
+                    <li class="social__item">
+                        <a href="{{ item.link }}" class="social__link social__link_{{ item.class }}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </header>
+        <div class="programsWapper" style="background-image: url(/assets/img/clouds.png)">
+            <dl class="programs">
+                <dt class="programs__noshow">Rating</dt>
+                    <div class="programs__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                        <dd itemprop="ratingValue">
+                            9.1
+                        </dd>
+                    </div>
+                <dt class="programs__noshow">Type</dt>
+                    <dd class="programs__type">New season</dd>
+                <dt class="programs__noshow">Show name</dt>
+                    <dd class="programs__name">Toco<br> &Muku</dd>
+                <dt class="programs__noshow">Time</dt>
+                    <dd class="programs__time">
+                        <time>21:00</time>
+                    </dd>
+                <dt class="programs__noshow">Genre</dt>
+                    <dd class="programs__genre">Animation, Comedy</dd>
+                <dt class="programs__noshow">Form</dt>
+                    <dd class="programs__form">TV Series (2017-)</dd>
+            </dl>
+            <div class="programs">
+                <a class="play-button" href="/">
+                    <span class="play-button__level3">
+                        <span class="play-button__level2">
+                            <span class="play-button__level1">    
+                                Play
+                            </span>
+                        </span>
+                    </span>
+                </a>
+                <span class="programs__trailer-container">
+                    <span class="programs__trailer">Watch Trailer</span>
+                    <time class="programs__trailertime">01:35</time>   
+                </span>
+                <div class="programs__image" style="background-image: url(/assets/img/fox.png)"></div>
+            </div>
+        </div>
+
+
+        {{ content }}
+    </body>
+</html>

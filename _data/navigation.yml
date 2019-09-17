@@ -1,0 +1,8 @@
+- name: Movies
+  link: /movies
+- name: TV Shows
+  link: /tvshowes
+- name: At Home
+  link: /
+- name: Corporate
+  link: /corporate

@@ -1,0 +1,9 @@
+- name: Facebook
+  link: /
+  class: facebook
+- name: Twitter
+  link: /
+  class: twitter
+- name: YouTube
+  link: /
+  class: youtube
